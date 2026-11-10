@@ -1,7 +1,7 @@
-import { Github, ExternalLink, Star, Smartphone, Network, Cpu, Truck, Activity, Bell } from 'lucide-react';
+import { Github, ExternalLink, Star, Smartphone, Network, Truck, Activity, Bell } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
-// --- Project Data (3-col grid cards) -----------------------------------------
+// --- Project Data (2-col grid cards) -----------------------------------------
 
 const projects = [
   {
@@ -14,14 +14,14 @@ const projects = [
     tag: '⭐ Featured · Mobile App',
     tagColor: 'text-amber-300 bg-amber-500/10 border-amber-500/20',
     title: 'SwiftNotesMobile',
-    subtitle: 'Cross-Platform · React Native & Expo',
+    subtitle: 'Android · React Native & Expo (2026)',
     description:
-      'A full-stack cross-platform mobile app built with React Native and Expo — delivering real business impact through secure Firebase Authentication, real-time Firestore sync, and a custom component-driven UI that works seamlessly across iOS and Android.',
+      'Designed and developed a feature-rich mobile note-taking app for Android with an intuitive UI/UX. Implemented real-time data sync and secure API keys using .env.',
     highlights: [
-      'Cross-platform iOS & Android (RN + Expo)',
-      'Secure Auth (Firebase Auth)',
-      'Real-time Firestore sync',
-      'Business-impact driven design',
+      'Android mobile app',
+      'Intuitive UI/UX design',
+      'Real-time data sync',
+      'Secure .env API keys',
     ],
     tech: ['React Native', 'Expo', 'Firebase', 'Tailwind CSS'],
     techColors: {
@@ -45,14 +45,14 @@ const projects = [
     tag: 'Network Engineering',
     tagColor: 'text-sky-300 bg-sky-500/10 border-sky-500/20',
     title: 'Enterprise Network Architecture',
-    subtitle: 'Secure Corporate Infrastructure Simulation',
+    subtitle: 'Secure Corporate Infrastructure Simulation (2026)',
     description:
-      'Designed and simulated a secure, scalable corporate network leveraging VLANs for segmentation, OSPF dynamic routing for inter-site communication, and VPN access for remote workforce connectivity.',
+      'Simulated a secure corporate infrastructure project covering VLAN design, OSPF routing for branch connectivity, and VPN implementation for secure WFH access.',
     highlights: [
       'VLAN Segmentation',
       'OSPF Dynamic Routing',
       'VPN Remote Access',
-      'Enterprise-grade topology',
+      'Secure WFH connectivity',
     ],
     tech: ['Cisco Packet Tracer', 'Linux'],
     techColors: {
@@ -64,40 +64,9 @@ const projects = [
     border: 'border-sky-500/20 hover:border-sky-400/50',
     glowShadow: 'hover:shadow-sky-500/10',
   },
-  {
-    id: 3,
-    featured: false,
-    icon: Cpu,
-    iconColor: 'text-rose-400',
-    iconBg: 'bg-rose-500/10',
-    iconBorder: 'border-rose-500/20',
-    tag: '🔩 IoT / Hardware',
-    tagColor: 'text-rose-300 bg-rose-500/10 border-rose-500/20',
-    title: 'Smart Cold Chain Logistics',
-    subtitle: 'Raspberry Pi IoT Monitoring System',
-    description:
-      'A real-time cold chain monitoring platform using Raspberry Pi as the edge node. Collects temperature & humidity sensor data, streams it to Firebase via MQTT, and triggers automated alerts when thresholds are breached — designed for pharmaceutical and food logistics.',
-    highlights: [
-      'Raspberry Pi edge computing',
-      'MQTT sensor data streaming',
-      'Firebase real-time alerts',
-      'Threshold breach detection',
-    ],
-    tech: ['Raspberry Pi', 'Python', 'Firebase', 'MQTT'],
-    techColors: {
-      'Raspberry Pi': 'bg-rose-500/10 text-rose-300 border-rose-500/20',
-      'Python':       'bg-blue-500/10 text-blue-300 border-blue-500/20',
-      'Firebase':     'bg-amber-500/10 text-amber-300 border-amber-500/20',
-      'MQTT':         'bg-teal-500/10 text-teal-300 border-teal-500/20',
-    },
-    github: 'https://github.com/wachirafue',
-    gradient: 'from-rose-900/20 via-slate-900/50 to-pink-900/20',
-    border: 'border-rose-500/20 hover:border-rose-400/50',
-    glowShadow: 'hover:shadow-rose-500/10',
-  },
 ];
 
-// --- Featured Omega Card (Project Omega - full width) -------------------------
+// --- Featured Omega Card (Smart Cold Chain — full width) ----------------------
 
 function FeaturedOmegaCard() {
   const { ref, isVisible } = useScrollReveal();
@@ -130,11 +99,14 @@ function FeaturedOmegaCard() {
   ];
 
   const omegaTech = [
-    { name: 'JavaScript', color: 'bg-yellow-500/10 text-yellow-300 border-yellow-500/20' },
-    { name: 'Node.js',    color: 'bg-green-500/10 text-green-300 border-green-500/20' },
-    { name: 'Next.js',    color: 'bg-slate-500/10 text-slate-300 border-slate-500/20' },
-    { name: 'Prisma',     color: 'bg-teal-500/10 text-teal-300 border-teal-500/20' },
-    { name: 'MQTT',       color: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/20' },
+    { name: 'JavaScript',   color: 'bg-yellow-500/10 text-yellow-300 border-yellow-500/20' },
+    { name: 'Node.js',      color: 'bg-green-500/10 text-green-300 border-green-500/20' },
+    { name: 'Next.js',      color: 'bg-slate-500/10 text-slate-300 border-slate-500/20' },
+    { name: 'Prisma',       color: 'bg-teal-500/10 text-teal-300 border-teal-500/20' },
+    { name: 'Python',       color: 'bg-blue-500/10 text-blue-300 border-blue-500/20' },
+    { name: 'Raspberry Pi', color: 'bg-rose-500/10 text-rose-300 border-rose-500/20' },
+    { name: 'MQTT',         color: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/20' },
+    { name: 'Firebase',     color: 'bg-amber-500/10 text-amber-300 border-amber-500/20' },
   ];
 
   return (
@@ -183,29 +155,34 @@ function FeaturedOmegaCard() {
           {/* Tag */}
           <span className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-full border mb-3 w-fit text-emerald-300 bg-emerald-500/10 border-emerald-500/20">
             <Star size={11} className="fill-current" />
-            New · Featured · IoT Dashboard
+            Featured · IoT Dashboard · 2025 – 2026
           </span>
 
           {/* Title */}
-          <h3 className="text-xl font-bold text-white mb-1">Smart Cold Chain Management System</h3>
-          <p className="text-sm text-slate-500 mb-3 font-medium">Project Omega · Real-Time IoT Fleet Dashboard</p>
+          <h3 className="text-xl font-bold text-white mb-1">
+            Smart Cold Chain Management &amp; IoT Logistics System
+          </h3>
+          <p className="text-sm text-slate-500 mb-3 font-medium">
+            Project Omega · End-to-End IoT Fleet Dashboard
+          </p>
 
           {/* Description */}
           <p className="text-slate-400 text-sm leading-relaxed mb-4">
-            A real-time IoT fleet and cold chain tracking dashboard featuring{' '}
-            <span className="text-white">live telemetry data monitoring</span>,{' '}
-            <span className="text-white">active truck status tracking</span>, and intelligent alert management —
-            built for operational visibility and{' '}
-            <span className="text-emerald-300">smart facility management</span> at scale.
+            Developed an{' '}
+            <span className="text-white">end-to-end IoT fleet dashboard</span>{' '}
+            for monitoring{' '}
+            <span className="text-white">real-time temperature and humidity</span>, with{' '}
+            <span className="text-emerald-300">anomaly detection alerts</span>{' '}
+            via Firebase to prevent product spoilage.
           </p>
 
           {/* Highlights */}
           <ul className="grid grid-cols-2 gap-1.5 mb-4">
             {[
-              'Live telemetry data monitoring',
-              'Active truck status tracking',
-              'Alert management system',
-              'Real-time fleet analytics',
+              'Real-time temp/humidity monitoring',
+              'Anomaly detection alerts',
+              'Firebase integration',
+              'End-to-end IoT pipeline',
             ].map((h) => (
               <li key={h} className="flex items-center gap-1.5 text-xs text-slate-500">
                 <span className="w-1 h-1 rounded-full bg-emerald-500 flex-shrink-0" />
@@ -413,7 +390,7 @@ export default function Projects() {
             Featured <span className="text-gradient">Work</span>
           </h2>
           <p className="section-subheading">
-            Full-stack mobile apps, real-time IoT dashboards, enterprise networks, and hardware systems.
+            Full-stack IoT dashboards, mobile apps, and enterprise network simulations.
           </p>
         </div>
 
@@ -426,8 +403,8 @@ export default function Projects() {
           <FeaturedOmegaCard />
         </div>
 
-        {/* 3-column grid for remaining projects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 2-column grid for remaining projects */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}

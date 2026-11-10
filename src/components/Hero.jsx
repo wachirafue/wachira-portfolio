@@ -34,7 +34,7 @@ export default function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500" />
           </span>
-          Open to opportunities
+          Seeking Internship · Full-Stack / Cloud &amp; IoT
         </div>
 
         {/* Greeting */}
@@ -52,13 +52,13 @@ export default function Hero() {
                      animate-fade-in-up opacity-0-init"
           style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}
         >
-          <span className="text-gradient">Computer Engineering</span>
+          <span className="text-gradient">4th-Year Computer Engineering</span>
           <br />
           <span className="text-white">Student</span>
           <span className="text-slate-500"> | </span>
           <span className="text-gradient-subtle">Aspiring</span>
           <br />
-          <span className="text-white">Software Engineer</span>
+          <span className="text-white">Software Engineer Intern</span>
         </h1>
 
         {/* Sub-headline */}
@@ -67,10 +67,11 @@ export default function Hero() {
                      animate-fade-in-up opacity-0-init"
           style={{ animationDelay: '350ms', animationFillMode: 'forwards' }}
         >
-          Passionate about building{' '}
-          <span className="text-indigo-300 font-medium">full-stack mobile applications</span>,{' '}
-          <span className="text-purple-300 font-medium">enterprise backend systems</span>, and
-          learning <span className="text-cyan-300 font-medium">AI/ML</span>.
+          Seeking a{' '}
+          <span className="text-indigo-300 font-medium">Software Engineer Internship</span>{' '}
+          in{' '}
+          <span className="text-purple-300 font-medium">Full-Stack development</span>,{' '}
+          <span className="text-cyan-300 font-medium">Cloud &amp; IoT</span> systems.
         </p>
 
         {/* CTA Buttons */}

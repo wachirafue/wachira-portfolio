@@ -9,7 +9,7 @@ dist-ssr/
 build/
 out/
 
-# ── Environment & Secrets  ────────────────────────────────────────────────────
+# ── Environment & Secrets ─────────────────────────────────────────────────────
 .env
 .env.local
 .env.development
