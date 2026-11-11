@@ -4,7 +4,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 // ─── Education ───────────────────────────────────────────────────────────────
 
 const education = {
-  institution: 'Srinakharinwirot University (SPU)',
+  institution: 'Sripatum University (SPU)',
   degree: 'Bachelor of Engineering — Computer Engineering',
   gpa: '3.24',
   period: '2023 – Present',
